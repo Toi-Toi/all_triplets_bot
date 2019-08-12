@@ -1,9 +1,10 @@
 import requests
 import telebot
+import os
 
-URL = 'https://api.telegram.org/bot' + token + '/'
+URL = 'https://api.telegram.org/bot' + os.environ['token'] + '/'
 
-bot = telebot.TeleBot(token)
+bot = telebot.TeleBot(os.environ['token'])
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
