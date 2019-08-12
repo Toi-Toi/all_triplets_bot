@@ -8,7 +8,7 @@ bot = telebot.TeleBot(os.environ.get('ALL_TRIPLETS_BOT_TOKEN', None))
 def start_message(message):
     bot.send_message(message.chat.id, 'Привет, ты написал мне /start')
 
-
+bot.polling()
 # URL = 'https://api.telegram.org/bot' + os.environ['ALL_TRIPLETS_BOT_TOKEN'] + '/'
 
 # def get_updates():
