@@ -17,4 +17,5 @@ def send_welcome(message):
 
 
 # Той-Той любит пластик. Ммммм хрусть-хрусть.
-bot.polling()
+#bot.polling()
+print(token)
