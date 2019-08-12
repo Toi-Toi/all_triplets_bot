@@ -2,9 +2,7 @@ import requests
 import telebot
 import os
 
-URL = 'https://api.telegram.org/bot' + os.environ['token'] + '/'
-
-bot = telebot.TeleBot(os.environ['token'])
+bot = telebot.TeleBot(os.environ.get('ALL_TRIPLETS_BOT_TOKEN', None))
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
@@ -13,6 +11,7 @@ def send_welcome(message):
 
 
 
+# URL = 'https://api.telegram.org/bot' + os.environ['ALL_TRIPLETS_BOT_TOKEN'] + '/'
 
 # def get_updates():
 #    url = URL + 'getupdates'
